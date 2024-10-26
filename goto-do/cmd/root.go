@@ -1,27 +1,27 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 tiff github@tifflabs.org
 
 */
 package cmd
 
 import (
 	"os"
-
+  "encoding/csv"
+  "strconv"
+  "text/tabwriter"
+  "github.com/mergestat/timediff"
 	"github.com/spf13/cobra"
+  "errors"
 )
 
 
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "goto-do",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   `goto-do`,
+	Short: `CLI todo CRUD app`,
+  Long:  `CLI todo app where you can create, update, and delete tasks all 
+  from the command line. Written in Go`
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
