@@ -27,6 +27,18 @@ var rootCmd = &cobra.Command{
 	// Run: func(cmd *cobra.Command, args []string) { },
 }
 
+// f, err := os.Create("", "tasks.csv")
+// if err != nil {
+//   log.Fatal(error)
+// }
+// defer os.Remove(f.name())
+
+f, err := os.
+
+func csvCreate() {
+
+}
+
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
